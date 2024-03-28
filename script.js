@@ -10,7 +10,7 @@ const third = document.getElementById('third');
 
 async function fetchData() {
    try {
-    const data = await fetch(`http://api.weatherapi.com/v1/current.json?key=504c5cfb26384fae8fe93859240602&q=${input.value}`);
+    const data = await fetch(`https://api.weatherapi.com/v1/current.json?key=504c5cfb26384fae8fe93859240602&q=${input.value}`);
     const response = await data.json();
     const result = response.current.condition.text;
     weatherSearch.value = result;
