@@ -37,18 +37,12 @@ button.addEventListener('click', function (event) {
     loader.classList.toggle('loading');
     first.classList.toggle('first');
     third.classList.toggle('third')
-    console.log('hey now')
     setTimeout(() => {
         loader.classList.toggle('loading');
         first.classList.toggle('first');
         third.classList.toggle('third')
         fetchData()
         weatherGifs()
-        console.log('hey later')
         html.removeAttribute('style','opacity:0.5;');
     }, 3000);
-  
- 
-   
-
 })
