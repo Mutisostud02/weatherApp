@@ -1,12 +1,12 @@
 html,body{
-    margin:0;
+    margin:1rem;
     padding:0;
 } 
 header{
     background-color: grey;
     padding:0.3rem;
     text-align: center;
-    color: white;    
+    color: white;   
 
 }
 form{
@@ -25,8 +25,57 @@ input {
     height:1.5rem;
     display:inline-block;
     }
-svg {
-    position:relative;
-    top:0.2rem;
+button {
+margin-top:0.3rem;
 }
+.loading {
+    position: absolute;
+    top:50%;
+    left:45%;
+    display: flex;
+    width: 100%;
+    z-index:2;
+
     
+}
+#first,#second,#third {
+    height: 1rem;
+    width: 1rem;
+    margin:0.5rem;
+    border-radius: 50%;
+}
+
+.first{
+        background-color: red;
+        opacity: 0.5;
+    animation: loader1,loader2 5s ease-in-out 0s infinite normal;
+    animation-name: loader1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    box-shadow: 3.6rem 0 0 aqua;
+
+}
+
+.third{
+    background-color: blue;
+}
+@keyframes loader1 {
+    0%{
+transform: translateX(0%);
+    }
+
+    100%{
+        transform: translateX(150%)
+    }
+}
+@keyframes loader2 {
+    0%{
+transform: translateX(100%);
+    }
+
+    100%{
+        transform: translate(0%);
+    }
+}
